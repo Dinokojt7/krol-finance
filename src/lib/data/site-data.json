@@ -1,0 +1,96 @@
+{
+  "business": {
+    "name": "Your Firm Name",
+    "tagline": "Your Firm Tagline",
+    "shortName": "Your Firm",
+    "description": "Professional tax and accounting services for individuals and businesses across South Africa.",
+    "phone": "+27 00 000 0000",
+    "email": "info@yourfirm.co.za",
+    "address": "City, Province, South Africa",
+    "social": {
+      "instagram": "#",
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  "services": [
+    { "title": "Tax Returns", "description": "Individual and corporate tax return preparation and submission to SARS." },
+    { "title": "Tax Planning", "description": "Strategic tax planning to minimise liability and maximise savings." },
+    { "title": "Financial Reports", "description": "Comprehensive financial statements and management accounts." },
+    { "title": "Payroll Services", "description": "Full payroll processing, compliance, and PAYE management." },
+    { "title": "Budget Analysis", "description": "Detailed budget planning and variance analysis for your business." },
+    { "title": "Internal Auditing", "description": "Certified internal audit services ensuring compliance and accuracy." }
+  ],
+  "stats": [
+    { "num": "10+", "label": "Years Experience" },
+    { "num": "200+", "label": "Clients Served" },
+    { "num": "100%", "label": "SARS Compliant" }
+  ],
+  "testimonials": [
+    {
+      "companyType": "Small Business",
+      "company": "Client Company Name",
+      "headline": "HEADLINE RESULT",
+      "subheadline": "Brief outcome summary",
+      "quote": "This firm transformed our financial operations. Professional, efficient, and always available when we need them.",
+      "author": "Client Name",
+      "role": "Director, Company Name"
+    },
+    {
+      "companyType": "Sole Proprietor",
+      "company": "Another Company",
+      "headline": "TAX SAVINGS",
+      "subheadline": "Significant reduction in tax liability",
+      "quote": "Their tax planning advice saved us thousands. I couldn't recommend them more highly.",
+      "author": "Another Client",
+      "role": "Owner, Business Name"
+    },
+    {
+      "companyType": "Corporate",
+      "company": "Corporate Client",
+      "headline": "FULL COMPLIANCE",
+      "subheadline": "100% compliant across all filings",
+      "quote": "We've been with this firm for years and have never had an issue with SARS. Absolute professionals.",
+      "author": "Finance Manager",
+      "role": "Head of Finance, Corp Name"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "WHAT SERVICES DO YOU OFFER?",
+      "answer": "We offer a full range of accounting, tax, audit, and advisory services for individuals and businesses of all sizes."
+    },
+    {
+      "question": "HOW DO I KNOW IF I NEED TO FILE A TAX RETURN?",
+      "answer": "If you earn above the SARS threshold or have multiple income sources, you are required to file. Contact us for a free assessment."
+    },
+    {
+      "question": "WHAT DOCUMENTS DO I NEED FOR TAX FILING?",
+      "answer": "Typically your IRP5, bank statements, proof of expenses, and any investment or rental income documentation."
+    },
+    {
+      "question": "DO YOU ASSIST WITH SARS eFILING?",
+      "answer": "Yes, we handle the full eFiling process on your behalf, ensuring accuracy and timely submission."
+    },
+    {
+      "question": "HOW DO I GET STARTED?",
+      "answer": "Simply get in touch via phone or email and we will schedule a no-obligation consultation at your convenience."
+    }
+  ],
+  "footer": {
+    "quickLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "About Us", "href": "/#about" },
+      { "label": "Services", "href": "/#services" },
+      { "label": "Testimonials", "href": "/#testimonials" },
+      { "label": "FAQ", "href": "/#faq" },
+      { "label": "Contact", "href": "/#contact" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "/privacy-policy" },
+      { "label": "Terms of Service", "href": "/terms" },
+      { "label": "PAIA Manual", "href": "/paia" }
+    ]
+  }
+}
