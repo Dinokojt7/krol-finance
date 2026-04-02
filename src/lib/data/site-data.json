@@ -1,81 +1,100 @@
 {
   "business": {
-    "name": "Your Firm Name",
-    "tagline": "Your Firm Tagline",
-    "shortName": "Your Firm",
-    "description": "Professional tax and accounting services for individuals and businesses across South Africa.",
-    "phone": "+27 00 000 0000",
-    "email": "info@yourfirm.co.za",
-    "address": "City, Province, South Africa",
+    "name": "Krol Finance",
+    "tagline": "Your Financial Growth Partner",
+    "shortName": "Krol Finance",
+    "description": "Krol Finance is a results-driven financial services company helping growing businesses take control of their finances and scale with confidence.",
+    "phone": "079 459 7281",
+    "email": "ukwenzamashiane@gmail.com",
+    "address": "7625 Korong Street, Soshanguve, South Africa",
+    "whatsapp": "https://wa.me/message/QQ36IWYZKSCNB1",
     "social": {
-      "instagram": "#",
+      "instagram": "https://www.instagram.com/krol_finances?igsh=MW5xZHhjeGRtZ3Z0aA==",
       "facebook": "#",
       "twitter": "#",
       "linkedin": "#"
     }
   },
   "services": [
-    { "title": "Tax Returns", "description": "Individual and corporate tax return preparation and submission to SARS." },
-    { "title": "Tax Planning", "description": "Strategic tax planning to minimise liability and maximise savings." },
-    { "title": "Financial Reports", "description": "Comprehensive financial statements and management accounts." },
-    { "title": "Payroll Services", "description": "Full payroll processing, compliance, and PAYE management." },
-    { "title": "Budget Analysis", "description": "Detailed budget planning and variance analysis for your business." },
-    { "title": "Internal Auditing", "description": "Certified internal audit services ensuring compliance and accuracy." }
+    {
+      "title": "Financial Management",
+      "description": "Day-to-day financial management and accurate bookkeeping so you always know where your business stands."
+    },
+    {
+      "title": "Cash Flow Optimization",
+      "description": "Strategic cash flow analysis and planning to keep your business liquid and positioned for growth."
+    },
+    {
+      "title": "Tax & Compliance",
+      "description": "SARS tax returns, eFiling, and full compliance support to keep your business on the right side of the law."
+    },
+    {
+      "title": "Financial Advisory",
+      "description": "Profit-focused financial strategy to help you make smarter business decisions and improve profitability."
+    },
+    {
+      "title": "Debt Management",
+      "description": "Practical debt restructuring and management solutions to reduce financial pressure and restore stability."
+    },
+    {
+      "title": "Asset Finance",
+      "description": "Car, business, and commercial asset finance to help you acquire the equipment and vehicles your business needs."
+    }
   ],
   "stats": [
-    { "num": "10+", "label": "Years Experience" },
-    { "num": "200+", "label": "Clients Served" },
-    { "num": "100%", "label": "SARS Compliant" }
+    { "num": "6+", "label": "Core Services" },
+    { "num": "100%", "label": "Compliance Rate" },
+    { "num": "SME", "label": "Specialists" }
   ],
   "testimonials": [
     {
       "companyType": "Small Business",
-      "company": "Client Company Name",
-      "headline": "HEADLINE RESULT",
-      "subheadline": "Brief outcome summary",
-      "quote": "This firm transformed our financial operations. Professional, efficient, and always available when we need them.",
-      "author": "Client Name",
-      "role": "Director, Company Name"
+      "company": "Client Company",
+      "headline": "CASH FLOW RESTORED",
+      "subheadline": "Business back on track within 60 days",
+      "quote": "Krol Finance gave us the clarity we needed. Our cash flow is now under control and we finally understand our numbers.",
+      "author": "Business Owner",
+      "role": "Director, SME Client"
     },
     {
       "companyType": "Sole Proprietor",
-      "company": "Another Company",
-      "headline": "TAX SAVINGS",
-      "subheadline": "Significant reduction in tax liability",
-      "quote": "Their tax planning advice saved us thousands. I couldn't recommend them more highly.",
-      "author": "Another Client",
-      "role": "Owner, Business Name"
+      "company": "Growing Business",
+      "headline": "TAX STRESS GONE",
+      "subheadline": "Full SARS compliance achieved",
+      "quote": "I was drowning in tax anxiety. Krol Finance handled everything — returns, eFiling, compliance — professionally and efficiently.",
+      "author": "Entrepreneur",
+      "role": "Owner, Sole Proprietorship"
     },
     {
-      "companyType": "Corporate",
-      "company": "Corporate Client",
-      "headline": "FULL COMPLIANCE",
-      "subheadline": "100% compliant across all filings",
-      "quote": "We've been with this firm for years and have never had an issue with SARS. Absolute professionals.",
-      "author": "Finance Manager",
-      "role": "Head of Finance, Corp Name"
+      "companyType": "SME",
+      "company": "Established Business",
+      "headline": "PROFIT UP",
+      "subheadline": "Smarter financial decisions driving growth",
+      "quote": "Their advisory approach is different. They don't just crunch numbers — they help you understand what those numbers mean for your growth.",
+      "author": "Managing Director",
+      "role": "MD, SME Client"
     }
   ],
   "faqs": [
     {
-      "question": "WHAT SERVICES DO YOU OFFER?",
-      "answer": "We offer a full range of accounting, tax, audit, and advisory services for individuals and businesses of all sizes."
+      "question": "WHAT SERVICES DOES KROL FINANCE OFFER?",
+      "answer": "We offer financial management and bookkeeping, cash flow optimization, tax and compliance support, strategic financial advisory, debt management, and asset finance for cars, business equipment, and commercial assets."
     },
     {
-      "question": "HOW DO I KNOW IF I NEED TO FILE A TAX RETURN?",
-      "answer": "If you earn above the SARS threshold or have multiple income sources, you are required to file. Contact us for a free assessment."
+      "question": "WHO DO YOU WORK WITH?",
+      "answer": "We primarily work with small to medium-sized businesses and committed entrepreneurs who are serious about growth and value professional financial guidance."
     },
     {
-      "question": "WHAT DOCUMENTS DO I NEED FOR TAX FILING?",
-      "answer": "Typically your IRP5, bank statements, proof of expenses, and any investment or rental income documentation."
+      "question": "DO YOU HANDLE SARS TAX RETURNS AND eFILING?",
+      "answer": "Yes. We manage the full SARS eFiling process on your behalf — from preparation to submission — ensuring accuracy and full compliance."
     },
     {
-      "question": "DO YOU ASSIST WITH SARS eFILING?",
-      "answer": "Yes, we handle the full eFiling process on your behalf, ensuring accuracy and timely submission."
+      "question": "CAN YOU HELP WITH DEBT MANAGEMENT?",
+      "answer": "Yes. We provide practical debt restructuring and management solutions tailored to your situation, helping reduce financial pressure and restore long-term stability."
     },
     {
-      "question": "HOW DO I GET STARTED?",
-      "answer": "Simply get in touch via phone or email and we will schedule a no-obligation consultation at your convenience."
+      "question": "HOW DO I BOOK AN APPOINTMENT?",
+      "answer": "You can reach us by phone, WhatsApp, or email to schedule a no-obligation consultation. We will assess your needs and recommend the right financial solution for your business."
     }
   ],
   "footer": {

@@ -3,8 +3,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "Accounting Firm | Professional Tax & Accounting | South Africa",
-  description: "Professional tax and accounting services for individuals and businesses across South Africa.",
+  title: "Krol Finance | Professional Tax & Accounting | South Africa",
+  description: "Krol Finance is a results-driven financial services company helping growing businesses take control of their finances. Tax, bookkeeping, cash flow, debt management, and asset finance — South Africa.",
 };
 
 export const viewport = {
