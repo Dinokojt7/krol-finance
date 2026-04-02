@@ -5,51 +5,70 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="w-full bg-white py-20 px-4 sm:px-8 lg:px-16 xl:px-24">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-        {/* Left column */}
+    <section id="about" className="w-full" style={{ backgroundColor: "var(--bg-warm)" }}>
+      <div className="grid md:grid-cols-2 items-start">
+
+        {/* Left: text — padded normally */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="py-20 pl-4 sm:pl-8 lg:pl-16 xl:pl-24 pr-6 md:pr-10"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase leading-[1.05] tracking-tight mb-8" style={{ color: "var(--primary)" }}>
-            TAX IS MORE THAN<br />
-            COMPLIANCE. IT IS THE<br />
-            FOUNDATION OF YOUR{" "}
-            <span className="relative inline-block">
-              FUTURE
-              <span className="absolute left-0 -bottom-1 h-1 w-full" style={{ backgroundColor: "var(--accent)" }} />
-            </span>
-            .
-          </h2>
+          <div className="max-w-lg">
+            <h2
+              className="mb-8 leading-[1.05] tracking-tight"
+              style={{
+                fontFamily: "'DM Serif Display', Georgia, serif",
+                fontSize: "clamp(36px, 5vw, 58px)",
+                color: "var(--primary)",
+              }}
+            >
+              More than accounting.<br />
+              Your partner in<br />
+              <em>financial growth.</em>
+            </h2>
 
-          <div className="space-y-5">
-            <p className="text-base text-gray-600 leading-relaxed">
-              We do the heavy lifting so you&apos;re free to focus on what matters most — building your life and your business. Our personalised approach means every client receives tailored advice, not off-the-shelf solutions.
-            </p>
-            <p className="text-base text-gray-600 leading-relaxed">
-              With years of experience serving individuals and businesses across South Africa, we have built lasting relationships based on trust, integrity, and results. From tax returns to financial reports and payroll, we are your partner every step of the way.
-            </p>
+            <div className="space-y-5">
+              <p className="text-base leading-relaxed" style={{ color: "#5A5A5A" }}>
+                Krol Finance is a results-driven financial services company dedicated to helping growing businesses take control of their finances and scale with confidence. We partner with serious business owners to deliver practical, profit-focused financial solutions that go beyond basic accounting.
+              </p>
+              <p className="text-base leading-relaxed" style={{ color: "#5A5A5A" }}>
+                At Krol Finance, we don&apos;t just manage finances — we act as your financial growth partner. Our approach is built on clarity, discipline, and measurable results, ensuring that our clients not only stay compliant but also achieve long-term financial success.
+              </p>
+            </div>
+
+            <a
+              href="/#contact"
+              className="inline-flex items-center justify-center mt-8 h-12 px-8 text-sm font-medium text-white rounded-full hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: "var(--primary)" }}
+            >
+              Get started
+            </a>
           </div>
         </motion.div>
 
-        {/* Right column — image */}
+        {/* Right: image — bleeds to right edge, pushed up */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="relative w-full aspect-4/5 rounded-xl overflow-hidden"
+          className="relative w-full"
+          style={{
+            height: "clamp(480px, 68vh, 780px)",
+            marginTop: "-80px",
+          }}
         >
           <Image
-            src="/images/about-team.jpg"
-            alt="Our accounting team"
+            src="/images/about-section.png"
+            alt="Krol Finance financial dashboard"
             fill
-            className="object-cover"
+            className="object-contain object-right-bottom"
           />
         </motion.div>
+
       </div>
     </section>
   );
