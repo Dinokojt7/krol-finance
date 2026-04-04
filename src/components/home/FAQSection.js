@@ -33,7 +33,7 @@ export default function FAQSection() {
             {/* Image (aligned to header, not title) */}
             <div className="mt-12 -ml-1 sm:-ml-2 lg:-ml-3">
               <Image
-                src="/images/asset-management.png"
+                src="/images/asset-management.webp"
                 alt="Asset management"
                 width={0}
                 height={0}

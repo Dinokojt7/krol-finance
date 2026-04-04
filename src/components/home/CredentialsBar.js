@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 const CREDS = [
   {
-    src: "/images/sars.jpg",
+    src: "/images/sars.webp",
     alt: "SARS — Tax Practitioner",
     label: "Tax Practitioner",
   },
-  { src: "/images/cigfar.jpg", alt: "CIGFARO", label: "CIGFARO Member" },
-  { src: "/images/saipa.jpg", alt: "SAIPA", label: "SAIPA Member" },
+  { src: "/images/cigfar.webp", alt: "CIGFARO", label: "CIGFARO Member" },
+  { src: "/images/saipa.webp", alt: "SAIPA", label: "SAIPA Member" },
 ];
 
 export default function CredentialsBar() {

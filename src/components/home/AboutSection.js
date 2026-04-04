@@ -76,7 +76,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <Image
-            src="/images/services-office.png"
+            src="/images/services-office.webp"
             alt="Professional financial advisors at work"
             width={0}
             height={0}

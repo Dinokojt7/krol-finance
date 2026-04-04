@@ -19,7 +19,7 @@ export default function Hero() {
       >
         {/* Full-bleed image */}
         <Image
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt="Financial documents and tools"
           fill
           priority
