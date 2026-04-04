@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 @import "tailwindcss";
 
 :root {
-  --primary: #1A1A1A;
-  --accent: #1A1A1A;
+  --primary: #1a1a1a;
+  --accent: #1a1a1a;
   --white: #ffffff;
-  --bg-warm: #F7F5F2;
-  --gray-light: #F0EFEB;
+  --bg-warm: #f5efd5;
+  --gray-light: #ede8d0;
 }
 
 @theme inline {
@@ -18,9 +18,11 @@
   --font-serif: "DM Serif Display", Georgia, serif;
 }
 
-html { overflow-x: hidden; }
+html {
+  overflow-x: hidden;
+}
 body {
-  background: #ffffff;
+  background: var(--bg-warm);
   color: var(--primary);
   font-family: "Inter", Arial, Helvetica, sans-serif;
   overflow-x: hidden;

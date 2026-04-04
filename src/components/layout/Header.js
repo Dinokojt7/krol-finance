@@ -9,11 +9,11 @@ import siteData from "@/lib/data/site-data.json";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
-  { label: "Services", href: "/#services" },
-  { label: "Testimonials", href: "/#testimonials" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -23,7 +23,9 @@ export default function Header() {
   useEffect(() => {
     if (menuOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   useEffect(() => {
@@ -39,14 +41,21 @@ export default function Header() {
       {/* Header — fixed, floats over the hero image */}
       <header
         className={`fixed z-50 transition-all duration-500 ${
-          pastHero
-            ? "top-3 left-4 right-4 rounded-2xl"
-            : "top-0 left-0 right-0"
+          pastHero ? "top-3 left-4 right-4 rounded-2xl" : "top-0 left-0 right-0"
         }`}
         style={
           pastHero
-            ? { backgroundColor: "rgba(15,14,12,0.4)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)" }
-            : { background: "linear-gradient(to right, rgba(15,14,12,1) 0%, rgba(15,14,12,0.5) 18%, transparent 52%)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)" }
+            ? {
+                backgroundColor: "rgba(15,14,12,0.4)",
+                backdropFilter: "blur(8px)",
+                WebkitBackdropFilter: "blur(8px)",
+              }
+            : {
+                background:
+                  "linear-gradient(to right, rgba(15,14,12,1) 0%, rgba(15,14,12,0.5) 18%, transparent 52%)",
+                backdropFilter: "blur(8px)",
+                WebkitBackdropFilter: "blur(8px)",
+              }
         }
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between h-20">
@@ -78,7 +87,7 @@ export default function Header() {
 
             {/* LET'S TALK button */}
             <Link
-              href="/#contact"
+              href="/contact"
               className="hidden sm:flex h-10 px-6 items-center border-2 border-white/40 text-white text-xs font-medium tracking-wide rounded-full hover:border-white transition-colors"
             >
               Let&apos;s talk
@@ -135,10 +144,22 @@ export default function Header() {
               style={{ backgroundColor: "var(--primary)" }}
             >
               <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
-                <Link href="/" className="relative h-12 w-32" onClick={() => setMenuOpen(false)}>
-                  <Image src="/images/logo.png" alt={siteData.business.name} fill className="object-contain object-left brightness-0 invert" />
+                <Link
+                  href="/"
+                  className="relative h-12 w-32"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <Image
+                    src="/images/logo.png"
+                    alt={siteData.business.name}
+                    fill
+                    className="object-contain object-left brightness-0 invert"
+                  />
                 </Link>
-                <button onClick={() => setMenuOpen(false)} className="p-2 text-white">
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="p-2 text-white"
+                >
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -149,24 +170,30 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className="block py-4 text-white text-base font-semibold tracking-wide border-b border-white/10 transition-colors"
-                    style={{ "--hover-color": "var(--accent)" }}
-                    onMouseEnter={e => e.currentTarget.style.color = "var(--accent)"}
-                    onMouseLeave={e => e.currentTarget.style.color = ""}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = "var(--accent)")
+                    }
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "")}
                   >
                     {link.label}
                   </Link>
                 ))}
               </nav>
               <div className="px-6 py-5 border-t border-white/10">
-                <p className="text-xs text-white/40 mb-2 uppercase tracking-widest">Contact</p>
-                <p className="text-sm text-white/70">{siteData.business.phone}</p>
-                <p className="text-sm text-white/70 mt-1">{siteData.business.email}</p>
+                <p className="text-xs text-white/40 mb-2 uppercase tracking-widest">
+                  Contact
+                </p>
+                <p className="text-sm text-white/70">
+                  {siteData.business.phone}
+                </p>
+                <p className="text-sm text-white/70 mt-1">
+                  {siteData.business.email}
+                </p>
               </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
-
     </>
   );
 }

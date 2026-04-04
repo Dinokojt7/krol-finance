@@ -1,11 +1,11 @@
 {
   "business": {
     "name": "Krol Finance",
-    "tagline": "Your Financial Growth Partner",
+    "tagline": "Plan Today. Prosper Tomorrow.",
     "shortName": "Krol Finance",
     "description": "Krol Finance is a results-driven financial services company helping growing businesses take control of their finances and scale with confidence.",
     "phone": "079 459 7281",
-    "email": "ukwenzamashiane@gmail.com",
+    "email": "info@krolfinance.com",
     "address": "7625 Korong Street, Soshanguve, South Africa",
     "whatsapp": "https://wa.me/message/QQ36IWYZKSCNB1",
     "social": {
@@ -17,28 +17,40 @@
   },
   "services": [
     {
-      "title": "Financial Management",
-      "description": "Day-to-day financial management and accurate bookkeeping so you always know where your business stands."
+      "title": "Car Finance",
+      "description": "We help you qualify for the perfect car finance deal, whether buying new or pre-owned. We negotiate the best rates on your behalf.",
+      "detail": "Whether you are purchasing your first car or upgrading your fleet, Krol Finance helps you access competitive car finance rates tailored to your financial profile. We handle the paperwork, negotiate with lenders, and make sure you drive away with the best deal possible."
     },
     {
-      "title": "Cash Flow Optimization",
-      "description": "Strategic cash flow analysis and planning to keep your business liquid and positioned for growth."
+      "title": "Business Finance",
+      "description": "Access the capital your business needs to grow — from working capital solutions to equipment and expansion financing.",
+      "detail": "Growing businesses need reliable funding. We connect you with the right business finance solutions — from short-term working capital to long-term growth loans — structured around your business goals and cash flow cycles."
     },
     {
-      "title": "Tax & Compliance",
-      "description": "SARS tax returns, eFiling, and full compliance support to keep your business on the right side of the law."
-    },
-    {
-      "title": "Financial Advisory",
-      "description": "Profit-focused financial strategy to help you make smarter business decisions and improve profitability."
+      "title": "Commercial Asset Finance",
+      "description": "Finance trucks, machinery, and commercial assets with tailored solutions that fit your business model.",
+      "detail": "Don't let capital constraints hold your operations back. We structure commercial asset finance deals for trucks, heavy machinery, agricultural equipment, and more — so your business keeps moving forward."
     },
     {
       "title": "Debt Management",
-      "description": "Practical debt restructuring and management solutions to reduce financial pressure and restore stability."
+      "description": "We review your debts, simplify payments, reduce interest rates, and create personalised repayment plans.",
+      "detail": "Overwhelmed by multiple debt obligations? Krol Finance acts as your financial advisor to consolidate, restructure, and manage your debts strategically — reducing your interest burden and building a clear path to financial freedom.",
+      "points": [
+        "Reviewing your debts",
+        "Simplifying payments",
+        "Reducing interest rates",
+        "Creating repayment plans"
+      ]
     },
     {
-      "title": "Asset Finance",
-      "description": "Car, business, and commercial asset finance to help you acquire the equipment and vehicles your business needs."
+      "title": "Tax & Compliance",
+      "description": "SARS tax returns, eFiling, VAT, and full compliance support to keep your business on the right side of the law.",
+      "detail": "From individual tax returns to corporate eFiling, VAT registration, and SARS correspondence — we handle the full compliance cycle so you can focus on running your business without the stress of tax season."
+    },
+    {
+      "title": "Bookkeeping",
+      "description": "Accurate day-to-day financial records and monthly management accounts so you always know where your business stands.",
+      "detail": "Sound financial decisions start with accurate records. Our bookkeeping service keeps your accounts up to date, your cash flow clear, and your business ready for growth — giving you the financial visibility to plan with confidence."
     }
   ],
   "stats": [
@@ -78,33 +90,37 @@
   "faqs": [
     {
       "question": "WHAT SERVICES DOES KROL FINANCE OFFER?",
-      "answer": "We offer financial management and bookkeeping, cash flow optimization, tax and compliance support, strategic financial advisory, debt management, and asset finance for cars, business equipment, and commercial assets."
+      "answer": "We offer car finance, business finance, commercial asset finance, debt management, tax and compliance, and bookkeeping — covering the full spectrum of financial needs for individuals and growing businesses."
     },
     {
-      "question": "WHO DO YOU WORK WITH?",
-      "answer": "We primarily work with small to medium-sized businesses and committed entrepreneurs who are serious about growth and value professional financial guidance."
+      "question": "HOW DO I QUALIFY FOR CAR OR ASSET FINANCE?",
+      "answer": "Qualification depends on your income, credit profile, and the asset you wish to finance. We assess your situation and match you with the best available lenders. Contact us for a free pre-qualification assessment."
+    },
+    {
+      "question": "DO YOU ASSIST WITH DEBT CONSOLIDATION?",
+      "answer": "Yes. We review your existing debts, simplify your payments into a manageable plan, work to reduce interest rates, and create a structured repayment strategy tailored to your income."
     },
     {
       "question": "DO YOU HANDLE SARS TAX RETURNS AND eFILING?",
-      "answer": "Yes. We manage the full SARS eFiling process on your behalf — from preparation to submission — ensuring accuracy and full compliance."
+      "answer": "Yes. We manage the full SARS eFiling process on your behalf — from preparation to submission — ensuring accuracy and full compliance for individuals and businesses."
     },
     {
-      "question": "CAN YOU HELP WITH DEBT MANAGEMENT?",
-      "answer": "Yes. We provide practical debt restructuring and management solutions tailored to your situation, helping reduce financial pressure and restore long-term stability."
+      "question": "WHO DO YOU WORK WITH?",
+      "answer": "We work primarily with small to medium-sized businesses and committed individuals who are serious about their financial future and value professional, results-driven guidance."
     },
     {
       "question": "HOW DO I BOOK AN APPOINTMENT?",
-      "answer": "You can reach us by phone, WhatsApp, or email to schedule a no-obligation consultation. We will assess your needs and recommend the right financial solution for your business."
+      "answer": "You can reach us by phone, WhatsApp, or our online contact form to schedule a no-obligation consultation. We will assess your needs and recommend the right financial solution for your situation."
     }
   ],
   "footer": {
     "quickLinks": [
       { "label": "Home", "href": "/" },
-      { "label": "About Us", "href": "/#about" },
-      { "label": "Services", "href": "/#services" },
-      { "label": "Testimonials", "href": "/#testimonials" },
-      { "label": "FAQ", "href": "/#faq" },
-      { "label": "Contact", "href": "/#contact" }
+      { "label": "About Us", "href": "/about" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Testimonials", "href": "/testimonials" },
+      { "label": "FAQ", "href": "/faq" },
+      { "label": "Contact", "href": "/contact" }
     ],
     "legal": [
       { "label": "Privacy Policy", "href": "/privacy-policy" },

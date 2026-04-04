@@ -28,6 +28,7 @@ A Next.js landing page template for South African accounting firms.
    ```
 
 ## Tech Stack
+
 - Next.js 16 (App Router)
 - Tailwind CSS v4
 - Framer Motion

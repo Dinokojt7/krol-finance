@@ -4,7 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const CREDS = [
-  { src: "/images/sars.jpg", alt: "SARS — Tax Practitioner", label: "Tax Practitioner" },
+  {
+    src: "/images/sars.jpg",
+    alt: "SARS — Tax Practitioner",
+    label: "Tax Practitioner",
+  },
   { src: "/images/cigfar.jpg", alt: "CIGFARO", label: "CIGFARO Member" },
   { src: "/images/saipa.jpg", alt: "SAIPA", label: "SAIPA Member" },
 ];
@@ -23,11 +27,16 @@ export default function CredentialsBar() {
           className="flex flex-col sm:flex-row items-center justify-center divide-y sm:divide-y-0 sm:divide-x divide-gray-200"
         >
           {CREDS.map(({ src, alt, label }) => (
-            <div key={alt} className="flex flex-col items-center gap-3 px-12 py-6 sm:py-0">
+            <div
+              key={alt}
+              className="flex flex-col items-center gap-3 px-12 py-6 sm:py-0"
+            >
               <div className="relative h-16 w-28">
                 <Image src={src} alt={alt} fill className="object-contain" />
               </div>
-              <p className="text-[10px] text-gray-400 tracking-wider uppercase">{label}</p>
+              <p className="text-[10px] text-gray-400 tracking-wider uppercase">
+                {label}
+              </p>
             </div>
           ))}
         </motion.div>

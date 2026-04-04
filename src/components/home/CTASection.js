@@ -8,9 +8,13 @@ export default function CTASection() {
   const { business } = siteData;
 
   return (
-    <section id="contact" className="w-full py-10 px-4">
+    <section
+      id="contact"
+      className="w-full py-6 px-4"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       <div
-        className="max-w-7xl mx-auto rounded-2xl py-14 px-8 sm:px-12 lg:px-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-8"
+        className="rounded-2xl py-10 px-8 sm:px-12 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-8"
         style={{ backgroundColor: "var(--primary)" }}
       >
         {/* Left: text */}
@@ -27,11 +31,13 @@ export default function CTASection() {
               fontSize: "clamp(32px, 5vw, 56px)",
             }}
           >
-            Ready to grow<br />
+            Ready to grow
+            <br />
             <em>with confidence?</em>
           </h2>
           <p className="text-white/60 text-sm leading-relaxed max-w-sm mt-4">
-            Book a no-obligation consultation with Krol Finance today and take the first step toward financial clarity.
+            Book a no-obligation consultation with Krol Finance today and take
+            the first step toward financial clarity.
           </p>
         </motion.div>
 
@@ -45,8 +51,20 @@ export default function CTASection() {
           aria-hidden="true"
         >
           {Array.from({ length: 8 }).map((_, i) => (
-            <svg key={i} viewBox="0 0 20 32" fill="none" className="w-5 h-8" style={{ opacity: 0.1 + i * 0.07 }}>
-              <path d="M2 2L18 16L2 30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            <svg
+              key={i}
+              viewBox="0 0 20 32"
+              fill="none"
+              className="w-5 h-8"
+              style={{ opacity: 0.1 + i * 0.07 }}
+            >
+              <path
+                d="M2 2L18 16L2 30"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           ))}
         </motion.div>
