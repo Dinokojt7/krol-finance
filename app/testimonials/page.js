@@ -1,4 +1,5 @@
 import PageHero from "@/components/shared/PageHero";
+import Image from "next/image";
 import Link from "next/link";
 import siteData from "@/lib/data/site-data.json";
 
@@ -28,49 +29,77 @@ export default function TestimonialsPage() {
         className="w-full py-20 px-6 sm:px-10 lg:px-16"
         style={{ backgroundColor: "var(--bg-warm)" }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white rounded-2xl p-8 flex flex-col">
-              <div className="mb-6">
-                <p
-                  className="text-xs font-bold tracking-[0.25em] uppercase mb-1"
-                  style={{ color: "#A09060" }}
-                >
-                  {t.companyType}
-                </p>
-                <p
-                  className="text-lg font-semibold"
-                  style={{ color: "var(--primary)" }}
-                >
-                  {t.headline}
-                </p>
-                <p
-                  className="text-xs tracking-wide mt-0.5"
-                  style={{ color: "#9CA3AF" }}
-                >
-                  {t.subheadline}
-                </p>
-              </div>
+            <div
+              key={i}
+              className="bg-white rounded-2xl overflow-hidden flex flex-col"
+            >
+              {/* Logo panel */}
               <div
-                className="w-8 h-px mb-6"
+                className="flex items-center justify-center py-10 px-8"
                 style={{ backgroundColor: "var(--primary)" }}
-              />
-              <p
-                className="text-sm leading-relaxed italic flex-1"
-                style={{ color: "#5A5A5A" }}
               >
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div className="mt-6 pt-5 border-t border-gray-100">
+                <div className="bg-white rounded-xl p-4 w-36 h-36 flex items-center justify-center">
+                  <Image
+                    src={t.image}
+                    alt={t.company}
+                    width={112}
+                    height={112}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 flex flex-col flex-1">
+                <div className="mb-5">
+                  <p
+                    className="text-xs font-bold tracking-[0.25em] uppercase mb-1"
+                    style={{ color: "#A09060" }}
+                  >
+                    {t.companyType}
+                  </p>
+                  <p
+                    className="text-lg font-black uppercase leading-tight"
+                    style={{ color: "var(--primary)" }}
+                  >
+                    {t.headline}
+                  </p>
+                  <p
+                    className="text-xs tracking-wide mt-0.5"
+                    style={{ color: "#9CA3AF" }}
+                  >
+                    {t.subheadline}
+                  </p>
+                </div>
+                <div
+                  className="w-8 h-px mb-5"
+                  style={{ backgroundColor: "var(--primary)" }}
+                />
                 <p
-                  className="text-sm font-semibold"
-                  style={{ color: "var(--primary)" }}
+                  className="text-sm leading-relaxed italic flex-1"
+                  style={{ color: "#5A5A5A" }}
                 >
-                  {t.author}
+                  &ldquo;{t.quote}&rdquo;
                 </p>
-                <p className="text-xs mt-0.5" style={{ color: "#9CA3AF" }}>
-                  {t.role}
-                </p>
+                <div className="mt-6 pt-5 border-t border-gray-100 flex items-center gap-3">
+                  <div
+                    className="w-6 h-px"
+                    style={{ backgroundColor: "var(--primary)" }}
+                  />
+                  <div>
+                    <p
+                      className="text-sm font-semibold"
+                      style={{ color: "var(--primary)" }}
+                    >
+                      {t.author}
+                    </p>
+                    <p className="text-xs mt-0.5" style={{ color: "#9CA3AF" }}>
+                      {t.role}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

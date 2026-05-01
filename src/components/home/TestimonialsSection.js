@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import siteData from "@/lib/data/site-data.json";
 
 export default function TestimonialsSection() {
@@ -24,123 +26,162 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative w-full py-20 px-4 sm:px-8"
+      className="relative w-full py-24 px-4 sm:px-8"
       style={{ backgroundColor: "#F4F4F4" }}
     >
-      {/* Left arrow — pinned to section edge */}
-      <button
-        onClick={prev}
-        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-10 h-10 border-2 rounded-md flex items-center justify-center transition-colors z-10"
-        style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = "var(--primary)";
-          e.currentTarget.style.color = "#fff";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = "transparent";
-          e.currentTarget.style.color = "var(--primary)";
-        }}
-      >
-        <ChevronLeft className="w-4 h-4" />
-      </button>
+      <div className="max-w-5xl mx-auto">
+        {/* Section label */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-xs font-bold tracking-[0.3em] uppercase mb-12 text-center"
+          style={{ color: "var(--primary)" }}
+        >
+          Client Results
+        </motion.p>
 
-      {/* Right arrow — pinned to section edge */}
-      <button
-        onClick={next}
-        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-10 h-10 border-2 rounded-md flex items-center justify-center transition-colors z-10"
-        style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = "var(--primary)";
-          e.currentTarget.style.color = "#fff";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = "transparent";
-          e.currentTarget.style.color = "var(--primary)";
-        }}
-      >
-        <ChevronRight className="w-4 h-4" />
-      </button>
+        {/* Card */}
+        <div className="overflow-hidden rounded-2xl shadow-sm">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={current}
+              custom={direction}
+              initial={{ opacity: 0, x: direction * 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -direction * 60 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="grid grid-cols-1 lg:grid-cols-5"
+            >
+              {/* Left — company identity */}
+              <div
+                className="lg:col-span-2 flex flex-col items-center justify-center gap-6 py-12 px-10"
+                style={{ backgroundColor: "var(--primary)" }}
+              >
+                <div className="bg-white rounded-xl p-5 w-44 h-44 flex items-center justify-center">
+                  <Image
+                    src={t.image}
+                    alt={t.company}
+                    width={140}
+                    height={140}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/40 mb-2">
+                    {t.companyType}
+                  </p>
+                  <p className="text-base font-black text-white uppercase tracking-tight leading-snug">
+                    {t.company}
+                  </p>
+                </div>
+              </div>
 
-      {/* Content */}
-      <div className="max-w-2xl mx-auto text-center overflow-hidden">
-        <AnimatePresence mode="wait" custom={direction}>
-          <motion.div
-            key={current}
-            custom={direction}
-            initial={{ opacity: 0, x: direction * 80 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -direction * 80 }}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
+              {/* Right — quote */}
+              <div className="lg:col-span-3 bg-white flex flex-col justify-center px-10 py-12 sm:px-14">
+                <div
+                  className="text-8xl font-black leading-none mb-1 select-none"
+                  style={{ color: "var(--gray-light)" }}
+                >
+                  &ldquo;
+                </div>
+                <h3
+                  className="text-2xl sm:text-3xl font-black uppercase leading-tight mb-1"
+                  style={{ color: "var(--primary)" }}
+                >
+                  {t.headline}
+                </h3>
+                <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">
+                  {t.subheadline}
+                </p>
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed italic mb-8">
+                  {t.quote}
+                </p>
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-8 h-px"
+                    style={{ backgroundColor: "var(--primary)" }}
+                  />
+                  <div>
+                    <p
+                      className="text-sm font-bold"
+                      style={{ color: "var(--primary)" }}
+                    >
+                      {t.author}
+                    </p>
+                    <p className="text-xs text-gray-400 mt-0.5">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Navigation */}
+        <div className="flex items-center justify-center gap-6 mt-8">
+          <button
+            onClick={prev}
+            className="w-10 h-10 border-2 rounded-md flex items-center justify-center transition-colors"
+            style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--primary)";
+              e.currentTarget.style.color = "#fff";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.color = "var(--primary)";
+            }}
           >
-            {/* Company */}
-            <p
-              className="text-xs font-bold tracking-[0.3em] uppercase mb-1"
-              style={{ color: "var(--accent)" }}
-            >
-              {t.companyType}
-            </p>
-            <p
-              className="text-2xl sm:text-3xl font-black uppercase tracking-tight mb-2"
-              style={{ color: "var(--primary)" }}
-            >
-              {t.company}
-            </p>
+            <ChevronLeft className="w-4 h-4" />
+          </button>
 
-            <div
-              className="w-12 h-px mx-auto mb-8"
-              style={{ backgroundColor: "var(--accent)" }}
-            />
+          <div className="flex items-center gap-2">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setDirection(i > current ? 1 : -1);
+                  setCurrent(i);
+                }}
+                className="rounded-full transition-all duration-300"
+                style={{
+                  width: i === current ? "24px" : "8px",
+                  height: "8px",
+                  backgroundColor:
+                    i === current ? "var(--primary)" : "#d1d5db",
+                }}
+              />
+            ))}
+          </div>
 
-            {/* Headline */}
-            <h3
-              className="text-xl sm:text-2xl md:text-3xl font-black uppercase leading-tight mb-2"
-              style={{ color: "var(--primary)" }}
-            >
-              {t.headline}
-            </h3>
-            <p className="text-sm font-bold uppercase tracking-wide text-gray-500 mb-8">
-              {t.subheadline}
-            </p>
-
-            {/* Quote */}
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 italic">
-              &ldquo;{t.quote}&rdquo;
-            </p>
-            <p
-              className="text-sm font-bold"
-              style={{ color: "var(--primary)" }}
-            >
-              {t.author}
-            </p>
-            <p className="text-xs text-gray-400 mt-0.5 mb-10">{t.role}</p>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Dots only */}
-        <div className="flex items-center justify-center gap-2 mb-10">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => {
-                setDirection(i > current ? 1 : -1);
-                setCurrent(i);
-              }}
-              className="w-2 h-2 rounded-full transition-all"
-              style={{
-                backgroundColor: i === current ? "var(--accent)" : "#d1d5db",
-              }}
-            />
-          ))}
+          <button
+            onClick={next}
+            className="w-10 h-10 border-2 rounded-md flex items-center justify-center transition-colors"
+            style={{ borderColor: "var(--primary)", color: "var(--primary)" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--primary)";
+              e.currentTarget.style.color = "#fff";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.color = "var(--primary)";
+            }}
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
         </div>
 
         {/* CTA */}
-        <a
-          href="/contact"
-          className="inline-flex items-center justify-center h-12 px-8 text-sm font-medium text-white rounded-full hover:opacity-90 transition-opacity"
-          style={{ backgroundColor: "var(--primary)" }}
-        >
-          Get in touch
-        </a>
+        <div className="text-center mt-10">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center h-12 px-8 text-sm font-medium text-white rounded-full hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: "var(--primary)" }}
+          >
+            Get in touch
+          </Link>
+        </div>
       </div>
     </section>
   );

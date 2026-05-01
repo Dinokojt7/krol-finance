@@ -60,31 +60,24 @@
   ],
   "testimonials": [
     {
-      "companyType": "Small Business",
-      "company": "Client Company",
+      "companyType": "Agriculture",
+      "company": "Tlou Black Projects",
       "headline": "CASH FLOW RESTORED",
       "subheadline": "Business back on track within 60 days",
       "quote": "Krol Finance gave us the clarity we needed. Our cash flow is now under control and we finally understand our numbers.",
-      "author": "Business Owner",
-      "role": "Director, SME Client"
+      "author": "Director",
+      "role": "Tlou Black Projects",
+      "image": "/images/tlou-black-projects.webp"
     },
     {
-      "companyType": "Sole Proprietor",
-      "company": "Growing Business",
+      "companyType": "Freight & Transportation",
+      "company": "G Quate Logistics",
       "headline": "TAX STRESS GONE",
       "subheadline": "Full SARS compliance achieved",
       "quote": "I was drowning in tax anxiety. Krol Finance handled everything — returns, eFiling, compliance — professionally and efficiently.",
-      "author": "Entrepreneur",
-      "role": "Owner, Sole Proprietorship"
-    },
-    {
-      "companyType": "SME",
-      "company": "Established Business",
-      "headline": "PROFIT UP",
-      "subheadline": "Smarter financial decisions driving growth",
-      "quote": "Their advisory approach is different. They don't just crunch numbers — they help you understand what those numbers mean for your growth.",
-      "author": "Managing Director",
-      "role": "MD, SME Client"
+      "author": "Director",
+      "role": "G Quate Logistics",
+      "image": "/images/g-quate-logistics.webp"
     }
   ],
   "faqs": [
