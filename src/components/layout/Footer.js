@@ -3,16 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ChevronRight,
-  Instagram,
-  Facebook,
-  Twitter,
-  Linkedin,
-} from "lucide-react";
+import { Mail, Phone, MapPin, ChevronRight, Instagram, MessageCircle } from "lucide-react";
 import siteData from "@/lib/data/site-data.json";
 
 export default function Footer() {
@@ -20,9 +11,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Instagram, href: business.social.instagram, label: "Instagram" },
-    { icon: Facebook, href: business.social.facebook, label: "Facebook" },
-    { icon: Twitter, href: business.social.twitter, label: "Twitter" },
-    { icon: Linkedin, href: business.social.linkedin, label: "LinkedIn" },
+    { icon: MessageCircle, href: business.social.whatsapp, label: "WhatsApp" },
   ];
 
   return (
