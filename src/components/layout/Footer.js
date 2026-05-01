@@ -3,16 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ChevronRight, Instagram, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, ChevronRight, Instagram } from "lucide-react";
 import siteData from "@/lib/data/site-data.json";
 
 export default function Footer() {
   const { business, footer } = siteData;
 
-  const socialLinks = [
-    { icon: Instagram, href: business.social.instagram, label: "Instagram" },
-    { icon: MessageCircle, href: business.social.whatsapp, label: "WhatsApp" },
-  ];
 
   return (
     <footer
@@ -49,25 +45,34 @@ export default function Footer() {
               {business.tagline}
             </p>
             <div className="flex items-center gap-3 pt-1">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center transition-all hover:border-gray-900"
-                  style={{ color: "#5A5A5A" }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "var(--primary)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "#5A5A5A")
-                  }
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+              <a
+                href={business.social.instagram}
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center transition-all hover:border-gray-900"
+                style={{ color: "#5A5A5A" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--primary)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#5A5A5A")}
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href={business.social.whatsapp}
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center transition-all hover:border-gray-900"
+              >
+                <Image
+                  src="/images/whatsapp-icon.webp"
+                  alt="WhatsApp"
+                  width={18}
+                  height={18}
+                  className="object-contain"
+                  style={{ filter: "brightness(0) opacity(0.65)" }}
+                />
+              </a>
             </div>
           </motion.div>
 
